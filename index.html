@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous">
+    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -333,11 +334,11 @@
 
                 <div class="calendar">
                     <div class="month">
-                        <p>&lt;</p>
+                        <p onclick="prev_month()">&lt;</p>
                         <p class="actual-month">
-                            <b>JULY 2014</b>
+                            <b id="month">JULY</b>    <b id="year">2014</b>
                         </p>
-                        <p>&gt;</p>
+                        <p onclick="next_month()">&gt;</p>
                     </div>
                     <div class="week">
                         <p>S</p>
@@ -349,10 +350,10 @@
                         <p>S</p>
                     </div>
                     <div class="days">
-                        <div class="day">
+                        <div class="day" >
                             <span>1</span>
                         </div>
-                        <div class="day actual-day">
+                        <div class="day">
                             <span>2</span>
                         </div>
                         <div class="day">
