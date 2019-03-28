@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous">
-    <script src="javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 </head>
 
 <body>
@@ -189,11 +190,11 @@
                     <div class="message-date">
                         <p>12 April 2014</p>
                     </div>
-                    <button class="open">
+                    <button class="open" id="flip" class="button">
                         <i class="fas fa-sort-down"></i>
                     </button>
                 </div>
-                <div class="message-content">
+                <div class="message-content" id="panel">
                     <p>Hi Friend!!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora eius modi ipsam aspernatur
                         iure obcaecati, optio sed, dolores rerum, voluptates ea a unde aperiam accusamus omnis nam numquam
@@ -216,9 +217,20 @@
                     <div class="message-date">
                         <p>12 April 2014</p>
                     </div>
-                    <button>
+                    <button id="flip" class="button">
                         <i class="fas fa-sort-down"></i>
                     </button>
+                </div>
+                <div class="message-content" id="panel">
+                    <p>Hi Friend!!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora eius modi ipsam aspernatur
+                        iure obcaecati, optio sed, dolores rerum, voluptates ea a unde aperiam accusamus omnis nam numquam
+                        ad?
+                    </p>
+                    <div class="btn-container">
+                        <button class="reply-message">REPLY</button>
+                        <button class="delete-message">DELETE</button>
+                    </div>
                 </div>
                 <div class="messages">
                     <input type="checkbox" name="" id="">
@@ -232,9 +244,20 @@
                     <div class="message-date">
                         <p>21 June 2013</p>
                     </div>
-                    <button>
+                    <button id="flip" class="button1">
                         <i class="fas fa-sort-down"></i>
                     </button>
+                </div>
+                <div class="message-content" id="panel">
+                    <p>Hi Friend!!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora eius modi ipsam aspernatur
+                        iure obcaecati, optio sed, dolores rerum, voluptates ea a unde aperiam accusamus omnis nam numquam
+                        ad?
+                    </p>
+                    <div class="btn-container">
+                        <button class="reply-message">REPLY</button>
+                        <button class="delete-message">DELETE</button>
+                    </div>
                 </div>
                 <div class="messages">
                     <input type="checkbox" name="" id="">
@@ -248,9 +271,20 @@
                     <div class="message-date">
                         <p>20 June 2013</p>
                     </div>
-                    <button>
+                    <button id="flip" class="button">
                         <i class="fas fa-sort-down"></i>
                     </button>
+                </div>
+                <div class="message-content" id="panel">
+                    <p>Hi Friend!!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora eius modi ipsam aspernatur
+                        iure obcaecati, optio sed, dolores rerum, voluptates ea a unde aperiam accusamus omnis nam numquam
+                        ad?
+                    </p>
+                    <div class="btn-container">
+                        <button class="reply-message">REPLY</button>
+                        <button class="delete-message">DELETE</button>
+                    </div>
                 </div>
                 <div class="messages">
                     <input type="checkbox" name="" id="">
@@ -264,11 +298,21 @@
                     <div class="message-date">
                         <p>20 June 2013</p>
                     </div>
-                    <button>
+                    <button id="flip" class="button1">
                         <i class="fas fa-sort-down"></i>
                     </button>
                 </div>
-
+                <div class="message-content" id="panel">
+                    <p>Hi Friend!!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora eius modi ipsam aspernatur
+                        iure obcaecati, optio sed, dolores rerum, voluptates ea a unde aperiam accusamus omnis nam numquam
+                        ad?
+                    </p>
+                    <div class="btn-container">
+                        <button class="reply-message">REPLY</button>
+                        <button class="delete-message">DELETE</button>
+                    </div>
+                </div>
                 <div class="message-content1">
                     <div class="btn-container">
                         <button class="reply-message">5 Previously Messages</button>
@@ -334,11 +378,12 @@
 
                 <div class="calendar">
                     <div class="month">
-                        <p onclick="prev_month()">&lt;</p>
+                        <p id="prev_month">&lt;</p>
                         <p class="actual-month">
-                            <b id="month">JULY</b>    <b id="year">2014</b>
+                            <b id="month">JULY</b>
+                            <b id="year">2014</b>
                         </p>
-                        <p onclick="next_month()">&gt;</p>
+                        <p id="next_month">&gt;</p>
                     </div>
                     <div class="week">
                         <p>S</p>
@@ -349,8 +394,8 @@
                         <p>F</p>
                         <p>S</p>
                     </div>
-                    <div class="days">
-                        <div class="day" >
+                    <div class="days" id="dia">
+                        <!--    <div class="day" >
                             <span>1</span>
                         </div>
                         <div class="day">
@@ -442,7 +487,7 @@
                         </div>
                         <div class="day">
                             <span>31</span>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -570,6 +615,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="javascript.js"></script>
     </div>
 </body>
 

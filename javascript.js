@@ -1,39 +1,47 @@
 
-window.onload = function () {
-    year();
-    month();
+
+/*Desplegable*/
+var messages = document.getElementsByClassName('messages');
+var messages_array = [...messages];
+
+var button = [];
+messages_array.forEach(e => {
+    if (e.children[4]) button.push(e.children[4]);
+});
+
+button.forEach(x => {
+    x.addEventListener('click', () => {
+        open_message(x);
+    });
+});
+
+const delete_button_message = document.querySelectorAll(".message-content .btn-container .delete-message");
+delete_button_message.forEach(x => {
+    x.addEventListener('click', () => {
+        delete_message(x);
+    });
+});
+
+const delete_message = x => {
+
+    x.parentElement.parentElement.previousElementSibling.remove();
+    x.closest("div.message-content").remove(); 
 }
 
-// Obtener el año
-function year(y) {
-    var y = new Date();
-    document.getElementById("year").innerHTML = y.getFullYear();
-}
+const open_message = x => {
+    message = x.closest("div");
 
-// Obtener el mes
-function month(m, months){
-    var m = new Date();
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    document.getElementById("month").innerHTML = months[m.getMonth()];
-}
+    if (x.classList.contains('open')){
+        x.classList.remove('open');
 
-function next_month(){
-    var m = new Date();
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    document.getElementById("month").innerHTML = months[m.getMonth() + 1];
-}
+        if (message.nextElementSibling.classList.contains('message-content')){
+            message.nextElementSibling.style = "display:none";
+        }
+    } else {
+        x.classList.add('open');
 
-function prev_month(){
-    var prev = new Date();
-    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-   var prev_mes = document.getElementById("month").innerHTML = month[prev.getMonth() - 1];
-
-    if(prev_mes == month["February"]){
-        prev_mes = document.getElementById("month").innerHTML = month[prev.getMonth() - 1];
-    } 
-}
-
-function day (){
-    var d = new Date();
-    
+        if (message.nextElementSibling.classList.contains('message-content')){
+            message.nextElementSibling.style = "display:block";
+        }
+    }
 }
