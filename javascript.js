@@ -1,3 +1,6 @@
+/*Para poder tener una idea de como estructurarlo me he basado más o menos en esta pagina aunque algunas funciones son similares
+https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d*/
+
 /*Calendar */
 const date = new Date();
 const actual_days = {
